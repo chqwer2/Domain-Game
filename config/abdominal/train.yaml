@@ -1,0 +1,15 @@
+mission: "abdominal"
+TAG: init
+
+###### training configs ######
+tr_domain: "SABSCT"
+
+# CHAOS_CT, CHAOS_T1_InPhase, CHAOS_T1_OutPhase, CHAOS_T2SPIR
+te_domain: "CHAOST2"
+
+
+nclass: 5
+contrast: True
+sam:   False
+
+

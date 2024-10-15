@@ -1,0 +1,35 @@
+
+mission: "brain"
+TAG: init
+
+###### training configs ######
+# val_index_class: ["bg", "NCR", "ED", "ET"]
+# BraTS-GLI-T1C    # SSA | PED
+#                  # T1C, T1N, T2F, T2W
+
+infer_epoch_freq: 100  # 25
+chunksize: 200
+use_discriminator: False
+backbone: 'efficientnet-b2'  # 
+
+
+tr_domain: "BraTS-GLI-T1C"
+te_domain: ["BraTS-SSA-T1C"]
+
+# "BraTS-PED-T1N", "BraTS-PED-T2F", "BraTS-PED-T2W"
+# "BraTS-PED-T1C"
+
+
+in_channel: 3    # 3 for 2D,  control the net
+model_type: "3D"  # 2D | 3D | 2.5D
+input_window: 1   # 1
+
+
+nclass: 4
+fineSize: 128               # 192 original
+batchSize: 32               # 48 original
+
+
+contrast: True
+sam: False
+

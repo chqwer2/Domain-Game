@@ -1,0 +1,94 @@
+exp_type: "exp"
+name: "myexp"
+
+
+get_features: False
+batchSize: 32               # bs 32->40
+fineSize: 192               # 192?
+gpu_ids: [0]
+nThreads: 4
+load_dir: "./checkpoints"
+checkpoints_dir: "./checkpoints"
+reload_model_fid: ""
+backbone: 'efficientnet-b2'  # 
+
+wandb_key: "your_wandb_key"
+use_discriminator: False
+
+
+display_freq: 2000
+
+data_dir: /data
+input_window: 1
+
+# validation configs
+print_freq: 2000
+validation_freq: 2000
+save_epoch_freq: 1000
+infer_epoch_freq: 25 # 25
+print_iter_freq: 50
+
+save_prediction: False
+in_channel: 3
+sam: False
+pseudo: False
+
+exclu_domain: None # only for prostate for 1vs5 experiments, will override te_domain
+model: "efficient_b2_unet"
+
+
+eval_fold: 0 # not in use
+
+continue_train: False
+epoch_count: 1
+which_epoch: "latest"
+niter: 50
+niter_decay: 1950 # epoches for lr decay.
+
+optimizer: "adamw"                       # adam | adamw
+beta1: 0.5                               # 0.5
+lr: 0.0003
+adam_weight_decay: 5e-3                  # 0.01, 5e-5
+
+lr_policy: "lambda"                      # step/ plateau
+lr_decay_iters: 50
+early_stop_epoch: -1 # some baseline method might needs early stop/less overall iterations/smaller lr. Use -1 when disable it
+
+lambda_Seg: 1.0
+lambda_wce: 1.0
+lambda_dice: 1.0
+
+lambda_consist: 10.0     # Xu et al.
+
+init_type: "normal"
+
+# config for gin
+nb_gin: 20
+gin_out_nc: 3 # fit into the network
+gin_n_interm_ch: 2
+gin_nlayer: 4
+gin_norm: "frob"
+
+# config for ipa correlation maps
+blend_grid_size: 24 # 24*2=48, 1/4 of image size
+blend_epsilon: 0.3
+
+# consistency
+consist_type: "kld"
+
+# specific for augmentation strength. Use a rather strong photometric baseline to ensure fairness
+aug_mode: "strongbright"
+
+
+
+# Discriminative
+gan_mode : "lsgan"  # | lsgan | vanilla
+output_nc: 2    #
+ndf      : 64   # discrim filters in the first conv layer
+netD     : "n_layers"  # Or Pixel
+n_layers_D : 3
+norm      : "instance"
+init_gain : 0.02
+D_freq    : 3
+
+

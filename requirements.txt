@@ -1,0 +1,25 @@
+jupyter
+nibabel
+notebook
+numpy
+opencv-python
+Pillow
+sacred
+scikit-image
+scipy
+segmentation-models-pytorch
+SimpleITK
+tensorboardX
+timm
+torch
+torchfile
+torchvision
+tqdm
+monai
+onnxruntime
+wandb
+albumentations==1.0
+matplotlib
+# inplace_abn
+
+
