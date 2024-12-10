@@ -2,7 +2,7 @@
 [__[arxiv]__](https://arxiv.org/abs/2406.02125) [__[poster]__](https://h-chen.com/assets/paper/2024/DomainGame/MICCAI2024-Poster-formal.pdf) Repository under construction. May still have some bugs 🚧
 
 
-![Image](https://h-chen.com/assets/paper/2024/DomainGame/main.jpg)
+<img src="https://h-chen.com/assets/paper/2024/DomainGame/main.jpg" alt="Image" style="zoom:67%;" />
 
 * 2024-07 Our paper has accepted by MICCAI 2024 *Computational Mathematics Modeling in Cancer Analysis Workshop* as Oral Presentation!
 * 2024-06 arxiv version is online.

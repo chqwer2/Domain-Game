@@ -77,6 +77,7 @@ def get_config(path="./"):
     opt['phase'] = args.phase
     opt['debug'] = args.debug
 
+
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.deviceid)
     opt['resume'] = args.resume
     

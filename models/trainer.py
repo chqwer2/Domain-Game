@@ -175,7 +175,7 @@ class Trainer(BasicTrainer):
 
         # consistency between conditional distributions
         if opt.consist_type == 'kld':
-            self.kl_loss = torch.nn.KLDivLoss( reduction = 'mean')
+            self.kl_loss = torch.nn.KLDivLoss( reduction = 'batchmean') # , log_target=True
         else:
             raise NotImplementedError
 
